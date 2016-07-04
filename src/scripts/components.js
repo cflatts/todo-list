@@ -24,8 +24,22 @@ var ListView = React.createClass ({
     },
 
     render: function() {
+        console.log(this.props)
         return(
-            <div>Hi</div>
+            <div id = 'todoList'>
+                <Header />
+
+            </div>
+            )
+    }
+})
+
+var Header = React.createClass ({
+    render: function() {
+        return (
+            <div id = 'headerContainer'>
+                <h1>DOIT-TOIT LIST</h1>
+            </div>
             )
     }
 })
