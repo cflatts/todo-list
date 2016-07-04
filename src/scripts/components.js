@@ -24,11 +24,12 @@ var ListView = React.createClass ({
     },
 
     render: function() {
-        console.log(this.props)
+        // console.log(this.props)
         return(
             <div id = 'todoList'>
                 <Header />
-
+                <AddTask _addToTaskList = {this._addTask} />
+                <TaskList listColl = {this.state.listColl} />
             </div>
             )
     }
@@ -40,6 +41,30 @@ var Header = React.createClass ({
             <div id = 'headerContainer'>
                 <h1>DOIT-TOIT LIST</h1>
             </div>
+            )
+    }
+})
+
+var AddTask = React.createClass ({
+    _addTask: function (evt) {
+        if(evt.keyCode === 13) {
+            // console.log(evt)
+            this.props._addToTaskList(evt.target.value)
+            evt.target.value = ''
+        }
+    },
+
+    render: function() {
+        return (
+            <input onKeyDown = {this._addTask} />
+        )
+    }
+})
+
+var TaskList = React.createClass ({
+    render: function() {
+        return (
+            <div>Hi</div>
             )
     }
 })
