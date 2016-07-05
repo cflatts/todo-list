@@ -18,6 +18,10 @@ body {
 
 .container {
 
+    h1 {
+        font-size: 72px;
+    }
+
     #headerContainer {
         color: #E3CA2A;
         position: relative;
@@ -32,30 +36,37 @@ body {
         // opacity: 0;
     }
 
-    input::webkit-input-placeholder {
-        color: #E3CA2A;
-    }
-
     input:focus {
         outline: none;
         border: none;
     }
 
+    .taskList {
+
+    }
+
     .task {
 
         position: relative;
+        text-align: center;
+        margin-top: 25%;
+
 
         .taskItem {
             color: #E3CA2A;
+            font-size: 48px;
+            display: inline-block
+            width: 33%;
         }
 
-        select {
+        #status {
             width: 100px;
             padding: 8px;
             color: #E3CA2A;
             border: 3px solid #E3CA2A;
-            text-align: center;
+            text-align: left;
             text-decoration: none;
+            display: inline-block
         }
 
         #taskDoneButton {

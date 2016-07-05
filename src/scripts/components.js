@@ -100,7 +100,7 @@ var Task = React.createClass ({
         return (
             <div className = 'task'>
                 <div className = 'taskItem'>{this.props.taskModel.get('task')}</div>
-                <select onChange = {this._changeStatus}>
+                <select id = 'status' onChange = {this._changeStatus}>
                     <option value = 'incomplete' selected = {taskStatus.incomplete}>Incomplete</option>
                     <option value = 'inProgress' selected = {taskStatus.inProgress}>In Progress</option>
                     <option value = 'complete' selected = {taskStatus.complete}>Complete</option>
