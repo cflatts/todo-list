@@ -77,6 +77,12 @@ var TaskList = React.createClass ({
 })
 
 var Task = React.createClass ({
+    _changeStatus: function (evt) {
+        this.props.taskModel.set ({
+            status: evt.target.value
+        })
+    },
+
     render: function () {
         return (
             <div>Hi</div>
