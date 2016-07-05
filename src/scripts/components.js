@@ -105,7 +105,7 @@ var Task = React.createClass ({
                     <option value = 'inProgress' selected = {taskStatus.inProgress}>In Progress</option>
                     <option value = 'complete' selected = {taskStatus.complete}>Complete</option>
                 </select>
-                <button onClick = {this._removeTask}>I did it!</button>
+                <button id = 'taskDoneButton' onClick = {this._removeTask}>On to the next one!</button>
             </div>
             )
     }

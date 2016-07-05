@@ -32,12 +32,30 @@ body {
         // opacity: 0;
     }
 
+    input::webkit-input-placeholder {
+        color: yellow;
+    }
+
+    input:focus {
+        outline: none;
+        border: none;
+    }
+
     .task {
 
         position: relative;
 
         .taskItem {
             color: yellow;
+        }
+
+        #taskDoneButton {
+            width: 100px;
+            padding: 8px;
+            color: yellow;
+            border: 3px solid yellow;
+            text-align: center;
+            text-decoration: none;
         }
     }
 }
