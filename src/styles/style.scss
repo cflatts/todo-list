@@ -19,7 +19,7 @@ body {
 .container {
 
     #headerContainer {
-        color: yellow;
+        color: #E3CA2A;
         position: relative;
     }
 
@@ -28,12 +28,12 @@ body {
         text-align: center;
         font-size: 40px;
         position: relative;
-        // color: yellow;
+        // color: #E3CA2A;
         // opacity: 0;
     }
 
     input::webkit-input-placeholder {
-        color: yellow;
+        color: #E3CA2A;
     }
 
     input:focus {
@@ -46,14 +46,23 @@ body {
         position: relative;
 
         .taskItem {
-            color: yellow;
+            color: #E3CA2A;
+        }
+
+        select {
+            width: 100px;
+            padding: 8px;
+            color: #E3CA2A;
+            border: 3px solid #E3CA2A;
+            text-align: center;
+            text-decoration: none;
         }
 
         #taskDoneButton {
             width: 100px;
             padding: 8px;
-            color: yellow;
-            border: 3px solid yellow;
+            color: #E3CA2A;
+            border: 3px solid #E3CA2A;
             text-align: center;
             text-decoration: none;
         }
