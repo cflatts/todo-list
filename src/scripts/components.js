@@ -62,9 +62,17 @@ var AddTask = React.createClass ({
 })
 
 var TaskList = React.createClass ({
+    _getListComps: function(listColl) {
+        return listColl.map((model) => <Task taskModel = {model} />
+            )
+    },
+
     render: function() {
         return (
-            <div>Hi</div>
+            <ul id = 'taskList'>
+                {this._getListComps(this.props.listColl)}
+            </ul>
+            console.log(this.props.listColl)
             )
     }
 })
