@@ -1,4 +1,22 @@
 * {
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: 'Athiti', sans-serif;
 	box-sizing: border-box;
 }
+
+
+body {
+
+    display: flex;
+
+    img {
+        opacity: 0.5;
+        width: 100%;
+    }
+}
+
+// HEADER
+
+#headerContainer {
+    display: 1;
+}
+

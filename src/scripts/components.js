@@ -39,7 +39,7 @@ var Header = React.createClass ({
     render: function() {
         return (
             <div id = 'headerContainer'>
-                <h1>DOIT-TOIT LIST</h1>
+                <h1>GRINDIN' 101</h1>
             </div>
             )
     }
