@@ -56,7 +56,7 @@ var AddTask = React.createClass ({
 
     render: function() {
         return (
-            <input onKeyDown = {this._addTask} />
+            <input placeholder = 'Next side hustle' onKeyDown = {this._addTask} />
         )
     }
 })

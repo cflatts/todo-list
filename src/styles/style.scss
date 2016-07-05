@@ -1,4 +1,4 @@
-* {
+html {
 	font-family: 'Athiti', sans-serif;
 	box-sizing: border-box;
 }
@@ -6,17 +6,38 @@
 
 body {
 
-    display: flex;
-
     img {
-        opacity: 0.5;
         width: 100%;
+        position: absolute;
+        max-height: 100%;
+        opacity: 0.7;
     }
 }
 
 // HEADER
 
-#headerContainer {
-    display: 1;
-}
+.container {
 
+    #headerContainer {
+        color: yellow;
+        position: relative;
+    }
+
+    input {
+        width: 100%;
+        text-align: center;
+        font-size: 40px;
+        position: relative;
+        // color: yellow;
+        // opacity: 0;
+    }
+
+    .task {
+
+        position: relative;
+
+        .taskItem {
+            color: yellow;
+        }
+    }
+}
