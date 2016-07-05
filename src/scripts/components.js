@@ -76,5 +76,13 @@ var TaskList = React.createClass ({
     }
 })
 
+var Task = React.createClass ({
+    render: function () {
+        return (
+            <div>Hi</div>
+            )
+    }
+})
+
 
 export default ListView
