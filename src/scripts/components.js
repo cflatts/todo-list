@@ -72,7 +72,6 @@ var TaskList = React.createClass ({
             <ul id = 'taskList'>
                 {this._getListComps(this.props.listColl)}
             </ul>
-            console.log(this.props.listColl)
             )
     }
 })
