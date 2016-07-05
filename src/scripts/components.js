@@ -83,9 +83,29 @@ var Task = React.createClass ({
         })
     },
 
+    _removeTask: function () {
+        this.props.taskModel.destroy()
+    },
+
     render: function () {
+
+        var taskStatus = this.props.taskModel.get('status')
+
+        var statusValues = {
+            incomplete: taskStatus === 'incomplete' ? 'selected' : '',
+            inProgress: taskStatus === 'In Progress' ? 'selected' :'',
+            complete: taskStatus === 'Complete' ? 'selected' : ''
+        }
+
         return (
-            <div>Hi</div>
+            <div className = 'task'>
+                <div className = 'taskItem'>{this.props.taskModel.get('task')}</div>
+                <select onChange = {this._changeStatus}>
+                    <option value = 'incomplete' selected = {taskStatus.incomplete}>Incomplete</option>
+                    <option value = 'inProgress' selected = {taskStatus.inProgress}>In Progress</option>
+                    <option value = 'complete' selected = {taskStatus.complete}>Complete</option>
+                </select>
+            </div>
             )
     }
 })
