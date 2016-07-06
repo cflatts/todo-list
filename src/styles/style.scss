@@ -1,25 +1,26 @@
 html {
-	font-family: 'Athiti', sans-serif;
+	font-family: 'Boycott', sans-serif;
 	box-sizing: border-box;
+    background: url(https://d13yacurqjgara.cloudfront.net/users/29963/screenshots/1184966/hustle_logo.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
-
-body {
-
-    img {
-        width: 100%;
-        position: absolute;
-        max-height: 100%;
-        opacity: 0.7;
-    }
-}
 
 // HEADER
 
 .container {
 
+    position: absolute;
+    min-height: 100%;
+    width: 100%;
+
     h1 {
-        font-size: 72px;
+        position: relative;
+        font-size: 100px;
+        margin: 0;
     }
 
     #headerContainer {
@@ -28,12 +29,11 @@ body {
     }
 
     input {
-        width: 100%;
+        margin-left: 60%;
+        width: 30%;
         text-align: center;
         font-size: 40px;
         position: relative;
-        // color: #E3CA2A;
-        // opacity: 0;
     }
 
     input:focus {
@@ -41,38 +41,47 @@ body {
         border: none;
     }
 
-    .taskList {
+    input[type = 'text'] {
+        background: transparent;
+        border: none;
+        font-family: 'Boycott';
+        font-size: 50px;
+    }
 
+    ::-webkit-input-placeholder {
+        font-family: 'Boycott';
+        font-size: 50px;
+        color: #E3CA2A;
+        text-align: center;
     }
 
     .task {
 
         position: relative;
-        text-align: center;
-        margin-top: 25%;
+        display: inline-block;
+        width: 20%;
 
 
         .taskItem {
             color: #E3CA2A;
             font-size: 48px;
-            display: inline-block
-            width: 33%;
+            // display: inline-block
         }
 
         #status {
             width: 100px;
             padding: 8px;
-            color: #E3CA2A;
-            border: 3px solid #E3CA2A;
-            text-align: left;
+            color: #000000;
             text-decoration: none;
-            display: inline-block
+            display: inline-block;
+            background: #E3CA2A;
         }
 
         #taskDoneButton {
             width: 100px;
             padding: 8px;
-            color: #E3CA2A;
+            font-size: 10px;
+            color: #000000;
             border: 3px solid #E3CA2A;
             text-align: center;
             text-decoration: none;
