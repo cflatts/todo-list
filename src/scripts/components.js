@@ -9,7 +9,6 @@ var ListView = React.createClass ({
     },
 
     componentWillMount: function () {
-        console.log('mounting')
         this.props.listColl.on('update', () => {
             this.setState({
                 listColl: this.state.listColl
@@ -56,7 +55,7 @@ var AddTask = React.createClass ({
 
     render: function() {
         return (
-            <input type = 'text' placeholder = 'Next side hustle' onKeyDown = {this._addTask} />
+            <input type = 'text' placeholder = 'Next side hustle' onKeyDown = {this._addTask} autofocus = 'autofocus'/>
         )
     }
 })
