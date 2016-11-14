@@ -1,24 +1,16 @@
 import React from 'react'
+import STORE from './store'
+import ACTIONS from './actions'
 
 var ListView = React.createClass ({
 
     getInitialState: function () {
-        return {
-            listColl: this.props.listColl
-            }
+        return STORE._getData()
     },
 
     componentWillMount: function () {
-        this.props.listColl.on('update', () => {
-            this.setState({
-                listColl: this.state.listColl
-            })
-        })
-    },
-
-    _addTask : function(taskInfo) {
-        this.props.listColl.add({
-            task: taskInfo
+        STORE.on('storeChanged', () =>{
+            this.setState(STORE._getData())
         })
     },
 
@@ -28,7 +20,7 @@ var ListView = React.createClass ({
             <div id = 'todoList'>
                 <Header />
                 <Buttons />
-                <AddTask _addToTaskList = {this._addTask} />
+                <AddTask  />
                 <TaskList listColl = {this.state.listColl} />
             </div>
             )
@@ -59,8 +51,7 @@ var AddTask = React.createClass ({
     _addTask: function (evt) {
         if(evt.keyCode === 13) {
             // console.log(evt)
-            this.props._addToTaskList(evt.target.value)
-            evt.target.value = ''
+            ACTIONS._createTaks(evt.target.value)
         }
     },
 
