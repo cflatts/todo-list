@@ -27,6 +27,7 @@ var ListView = React.createClass ({
         return(
             <div id = 'todoList'>
                 <Header />
+                <Buttons />
                 <AddTask _addToTaskList = {this._addTask} />
                 <TaskList listColl = {this.state.listColl} />
             </div>
@@ -41,6 +42,16 @@ var Header = React.createClass ({
                 <h1>GRINDIN' 101</h1>
             </div>
             )
+    }
+})
+
+var Buttons = React.createClass({
+    render: function() {
+        return(
+            <div className = 'buttons'>
+                {['complete', 'incomplete', 'in progress'].map(buttonName => <button>{buttonName}</button>)}
+            </div>
+        )
     }
 })
 
